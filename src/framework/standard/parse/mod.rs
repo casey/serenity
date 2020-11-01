@@ -206,7 +206,7 @@ async fn find_prefix<'a>(
 /// [`Configuration::prefix`]: ../struct.Configuration.html#method.prefix
 #[allow(clippy::needless_lifetimes)] // Clippy and the compiler disagree
 pub async fn prefix<'a>(
-    ctx: &Context,
+    ctx: &'a Context,
     msg: &Message,
     stream: &mut Stream<'a>,
     config: &Configuration,
